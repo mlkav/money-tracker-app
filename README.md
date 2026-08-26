@@ -109,7 +109,7 @@ Konfigurasi Berkas Backend di Cloud Shell Sebelum Diunggah:
 
 - Edit money-tracker-api/modules/imgUpload.js: Isikan Project ID dan nama bucket Cloud Storage Anda.
 
-Edit money-tracker-api/routes/record.js: Perbarui konfigurasi koneksi MySQL (host, user, password, database) sesuai kredensial Cloud SQL Instance Anda.
+- Edit money-tracker-api/routes/record.js: Perbarui konfigurasi koneksi MySQL (host, user, password, database) sesuai kredensial Cloud SQL Instance Anda.
 
 Buat Instance Compute Engine:
 -
