@@ -9,11 +9,11 @@ Set Project Aktif di Cloud Shell:
 
 ```bash
 gcloud config set project [PROJECT_ID_ANDA]
-
+```
 
 Beri Hak Akses ke Reviewer (Least Privilege):
 
-``````bash
+```bash
 gcloud projects add-iam-policy-binding [PROJECT_ID_ANDA] \
     --member="user:reviewer_googlecloud@dicoding.com" \
     --role="roles/viewer"
