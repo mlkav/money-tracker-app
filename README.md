@@ -131,6 +131,8 @@ SSH ke Compute Engine:
 
 ```bash
 gcloud compute ssh money-tracker-backend-vm --zone=asia-southeast2-a
+```
+
 Install Node.js & PM2 di dalam VM:
 
 ```bash
@@ -184,9 +186,8 @@ gcloud app deploy
 Catat URL Frontend dari terminal (misal: https://[PROJECT_ID].et.r.appspot.com).
 
 Update Config Base URL Frontend:
-Edit file application/config/config.php:
-
-Uncomment dan ubah $config['base_url'] menjadi URL Frontend yang diperoleh.
+- Edit file application/config/config.php:
+- Uncomment dan ubah $config['base_url'] menjadi URL Frontend yang diperoleh.
 
 Deploy Ulang Frontend:
 
@@ -205,9 +206,6 @@ Buat berkas project.json berisi data infrastruktur:
   "bucket_name": "[NAMA_BUCKET_ANDA]"
 }
 ```
-
-Unggah berkas project.json tersebut ke platform Dicoding.
-
 
 DI VM BE
 ```
