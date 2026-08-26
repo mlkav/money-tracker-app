@@ -34,7 +34,7 @@ gcloud projects add-iam-policy-binding $PROJECT_ID \
     --member="serviceAccount:money-tracker-sa@${PROJECT_ID}.iam.gserviceaccount.com" \
     --role="roles/storage.objectAdmin"
 
-gcloud iam service-accounts keys create ./backend/serviceaccountkey.json \
+gcloud iam service-accounts keys create ./money-tracker-api-gcp/serviceaccountkey.json \
     --iam-account=money-tracker-sa@${PROJECT_ID}.iam.gserviceaccount.com
 
 gcloud projects add-iam-policy-binding $PROJECT_ID \
