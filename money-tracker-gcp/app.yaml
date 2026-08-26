@@ -1,0 +1,6 @@
+runtime: php83
+service: default
+
+handlers:
+  - url: /assets
+    static_dir: assets
