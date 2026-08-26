@@ -170,7 +170,7 @@ Set 'base_uri' ke URL External IP Backend dari Langkah 5 tanpa / di akhir (conto
 Buat Berkas app.yaml di Folder money-tracker:
 
 ```YAML
-runtime: php81
+runtime: php83
 service: default
 ```
 
@@ -265,5 +265,6 @@ npm start
 ```
 ## Frontend
 ```
+composer install
 php -S localhost:8080 -t .
 ```
