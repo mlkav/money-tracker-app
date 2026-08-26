@@ -73,12 +73,13 @@ Clone repository API terlebih dahulu:
 
 ```bash
 git clone -b money-tracker-api https://github.com/dicodingacademy/a133-gcp-labs.git money-tracker-api
+```
+
 Buat dan simpan key ke money-tracker-api/serviceaccountkey.json:
 
 ```bash
 gcloud iam service-accounts keys create money-tracker-api/serviceaccountkey.json \
     --iam-account=money-tracker-sa@[PROJECT_ID_ANDA].iam.gserviceaccount.com
-
 ```
 Langkah 4: Cloud SQL Setup & Database Schema
 Buat Instance Cloud SQL (MySQL 5.7) di asia-southeast2:
@@ -94,7 +95,7 @@ gcloud sql instances create money-tracker-db \
 Buat Database:
 
 ```bash
-gcloud sql databases create moneytracker \
+gcloud sql databases create money_tracker_db \
     --instance=money-tracker-db
 ```
 
@@ -106,12 +107,12 @@ gcloud sql connect money-tracker-db --user=root < money-tracker-api/create_table
 Langkah 5: Deploy Back-End ke Compute Engine (VM Instance)
 Konfigurasi Berkas Backend di Cloud Shell Sebelum Diunggah:
 
-Edit money-tracker-api/modules/imgUpload.js: Isikan Project ID dan nama bucket Cloud Storage Anda.
+- Edit money-tracker-api/modules/imgUpload.js: Isikan Project ID dan nama bucket Cloud Storage Anda.
 
 Edit money-tracker-api/routes/record.js: Perbarui konfigurasi koneksi MySQL (host, user, password, database) sesuai kredensial Cloud SQL Instance Anda.
 
 Buat Instance Compute Engine:
-
+-
 ```bash
 gcloud compute instances create money-tracker-backend-vm \
     --zone=asia-southeast2-a \
